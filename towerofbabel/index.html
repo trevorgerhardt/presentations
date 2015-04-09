@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tower of Babel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="big.css" rel="stylesheet" type="text/css">
+    <style>
+      div.imageText {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+      small {
+        font-size: 40%;
+        line-height: 1em;
+      }
+      notes {
+        display: none;
+      }
+    </style>
+    <script src="big.js"></script>
+  </head>
+  <body>
+    <div><img src="tower-of-babel.jpeg">
+      Tower of Babel.js<br>
+      <small>@trevorgerhardt / @conveyal</small>
+      <notes>Originally wanted to just talk about ES6 features, but a few months went by Babel became a big deal, Alex told me I had the entire evening to myself, so I expanded the scope a bit.</notes>
+    </div>
+    <div>
+      <ul>
+        <li>A bit of history</li>
+        <li>State of JavaScript</li>
+        <li>Building a future</li>
+      </ul>
+      <notes>What this talk is about</notes>
+    </div>
+    <div><img src="cfaz-screenshot.png">
+      AH!
+      <notes>Background on my work - highlights of CarFreeAtoZ/Modeify - NodeJS backed single page web app - Component based front end framework (does not currently use Babel)</notes>
+    </div>
+    <div><img src="hexacabi.png">
+      FUN
+      <notes>
+        Also work on viz tools, I write a lot of JavaScript (D3, Leaflet, Crossfilter, etc.)
+
+        Wiring components together.
+
+        Libraries, templates, event handlers, APIs, databases. This is the fun stuff. Solving new problems in novel ways.
+      </notes>
+    </div>
+    <div><img src="data-manager.png">
+      NOT FUN
+      <notes>
+        Form building, formatting data into tables, creating generic API endpoints for new data models. Reinventing the wheel.
+      </notes>
+    </div>
+
+    <div>
+      Brief history of JavaScript
+      <small>mostly</small>
+    </div>
+
+    <div><img src="tower-of-babel-cat.gif">
+      ~3000 B.C.
+      <notes>
+        Story from Genesis meant to explain the origin of languages.
+
+        A united civilization that built a towering city.
+
+        God thought what they were building was arrogant and decided to punish their hubris.
+
+        So he scattered them around the world and changed their languages so they couldn't understand each other or accomplish anything.
+
+        What an asshole.
+      </notes>
+    </div>
+
+    <div>
+      1969 🚀
+
+      <notes>We put a man on the moon. Check out that hubris!</notes>
+    </div>
+
+    <div>
+      1995 JavaScript created in 7 days<br>
+      <small>And God saw that it was good</small>
+
+      <notes>
+        by Brendan Eich
+
+        JavaScript is 20 years old! Young?
+
+        Named for marketing purposes. So, so stupid.
+      </notes>
+    </div>
+
+    <div>
+      2000 ECMAScript3 finalized<br>
+
+      <small>regex, try/catch</small>
+    </div>
+
+    <div>
+      2002 JSLint<br>
+
+      <small>7 years without syntax error checking</small>
+
+      <notes>Could finally check for errors outside of the browser...wow. The way to tell before was to just make sure the functionality worked in the browser...what??</notes>
+    </div>
+
+    <div><img src="codinghorror-app-icon.png">
+      2007 Atwood's Law
+
+      <notes>
+        Any application that can be written in JavaScript, will eventually be written in JavaScript. — http://blog.codinghorror.com/the-principle-of-least-power/
+
+        Precient quote — In July 2007 IE7 was the dominant browser with 67% of the market share
+      </notes>
+    </div>
+
+    <div><img src="nodejs.png">
+      2008 Chrome/V8
+
+      <notes>Along with the V8 engine. JIT compilation, run time optimization, garbage collection. Most importantly, smart people dedicated to making JavaScript fast.</notes>
+
+      <notes>The earliest JavaScript I wrote that is still in production somewhere (Shoutout to YDOP/GameJolt)</notes>
+    </div>
+
+    <div>
+      2009 CoffeeScript
+
+      <small>Compile to JS</small>
+
+      <notes>Ruby inspired sugar. Popularized the notion that you don't have to write in JavaScript, just run it. Inspired a lot of ES6 changes.</notes>
+    </div>
+
+    <div>
+      2010 ES5 Finalized<br>
+
+      <small><code>"use strict"</code>, getters/setters, JSON</small>
+
+      <notes>
+        ES4 never happened for political reasons. A full decade between standardized versions. We're moving at breakneck speed now!
+
+        This brought "use strict", getters/setters and JSON
+      </notes>
+    </div>
+
+    <div>
+      2011 Node Webkit<br>
+
+      <small>The final frontier: JavaScript on the desktop</small>
+
+      <notes>JavaScript for desktop applications. JavaScript top to bottom.</notes>
+    </div>
+
+    <div>
+      2012 Esprima<br>
+
+      <small>Syntax tree generation</small>
+
+      <notes>Code validation, transformation, preprocessing made much much easier</notes>
+    </div>
+
+    <div>
+      2014 ESNext<br>
+
+      <small>Use ES6 features today!</small>
+
+      <notes>Originally sponsored by Square who had a great web development team it took planned ECMAScript standardized features and compiled it into browser compatible code</notes>
+    </div>
+
+    <div>
+      2014 <code>io.js</code> schism
+
+      <notes>The great schism! Another biblical term. Go to NovaNode next month or find more about it online. There are a lot of reasons why this happened but the major one was falling way behind on V8 updates which contained native ES6 features.</notes>
+    </div>
+
+    <div>
+      2015 State of JavaScript<br>
+      <small>Past evented servers & dynamic web pages</small>
+    </div>
+
+    <div>
+      <ul>
+        <li>Atom</li>
+        <li>Browserify</li>
+        <li>Esprima/Espree</li>
+        <li>ESLint</li>
+        <li>Gulp/Grunt/Broccoli</li>
+        <li>React Native</li>
+      </ul>
+
+      <notes>We have legitimate applications, build systems, syntax tree parsers, pluggable validators, and complex build systems. We use it everywhere.</notes>
+    </div>
+
+    <div>
+      ES6<br>
+
+      <small>A language people want to use</small>
+
+      <notes>Don't expect any big changes. Pretty safe to assume it's stable at this point. Stop calling it ES2015, that's just stupid. A lot of the noticeable changes are syntactic sugar. It also standardizes common practices and alleviaates common painpoints.</notes>
+    </div>
+
+    <div>
+      Classes
+      <pre>
+class Person extends Model {
+  constructor (attributes) {
+    super (attributes)
+  },
+
+  log() {
+    super.print()
+  }
+}
+      </pre>
+
+      <notes>
+        Inheritance. Parent method calling. Constructors. Most importantly a standard way of doing it.
+        Don't listen to anyone that tells you otherwise they're being pedantic.
+        Don't overuse it, the factory Design Patterns is still helpful, but use the language, work with it, not against it.
+      </notes>
+    </div>
+
+    <div>
+      let/const and block scoping
+      <pre>
+for (let i = 0; i < 10; i++) {
+  const j = i // valid
+  j = i + 1 // TypeError: Assignment to constant variable
+}
+console.log(i, j) // both undefined
+      </pre>
+
+      <notes>
+        When converting code to ES6 an easy way to tell code that's been converted is the lack of `var`. There's no need for it anymore.
+
+        Currently must be used in strict mode in V8.
+      </notes>
+    </div>
+
+    <div>
+      Templates
+      <pre>
+const hours = 1000 * 1000 * 1000
+`We could have saved ${hours} hours of development time!`
+      </pre>
+
+      <notes>Seriously tho, how many strings have you concatenated?</notes>
+    </div>
+
+    <div>
+      Arrow Functions
+      <pre>
+// TODO: Example
+class Langs {
+  unique () {
+    return this.data.map()
+  }
+}
+      </pre>
+
+      <notes>Expression and statement bodies, lexical this.</notes>
+    </div>
+
+    <div>
+
+
+    <div>
+      Express, ComponentJS, Mongoose, D3, Backbone, Crossfilter, Leaflet, jQuery, Superagent, etc.
+
+      <notes>These are all libraries and modules I have intimate familiarity with from my time in JS land. A lot of them recreate the wheel on a regular basis.</notes>
+    </div>
+
+    <div><img src="up-in-the-air.jpg">
+      Decisions bring baggage
+    </div>
+  </body>
+</html>
