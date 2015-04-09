@@ -16,6 +16,18 @@
       notes {
         display: none;
       }
+
+      .contain {
+        background-size: contain;
+      }
+
+      .white {
+        background-color: white;
+      }
+
+      body {
+        background-repeat: no-repeat;
+      }
     </style>
     <script src="big.js"></script>
   </head>
@@ -23,35 +35,16 @@
     <div><img src="tower-of-babel.jpeg">
       Tower of Babel.js<br>
       <small>@trevorgerhardt / @conveyal</small>
+
       <notes>Originally wanted to just talk about ES6 features, but a few months went by Babel became a big deal, Alex told me I had the entire evening to myself, so I expanded the scope a bit.</notes>
     </div>
     <div>
       <ul>
         <li>A bit of history</li>
         <li>State of JavaScript</li>
-        <li>Building a future</li>
+        <li>ES6 & the future</li>
       </ul>
       <notes>What this talk is about</notes>
-    </div>
-    <div><img src="cfaz-screenshot.png">
-      AH!
-      <notes>Background on my work - highlights of CarFreeAtoZ/Modeify - NodeJS backed single page web app - Component based front end framework (does not currently use Babel)</notes>
-    </div>
-    <div><img src="hexacabi.png">
-      FUN
-      <notes>
-        Also work on viz tools, I write a lot of JavaScript (D3, Leaflet, Crossfilter, etc.)
-
-        Wiring components together.
-
-        Libraries, templates, event handlers, APIs, databases. This is the fun stuff. Solving new problems in novel ways.
-      </notes>
-    </div>
-    <div><img src="data-manager.png">
-      NOT FUN
-      <notes>
-        Form building, formatting data into tables, creating generic API endpoints for new data models. Reinventing the wheel.
-      </notes>
     </div>
 
     <div>
@@ -117,16 +110,20 @@
       </notes>
     </div>
 
-    <div><img src="nodejs.png">
+    <div>
       2008 Chrome/V8
 
-      <notes>Along with the V8 engine. JIT compilation, run time optimization, garbage collection. Most importantly, smart people dedicated to making JavaScript fast.</notes>
+      <notes>Along with the V8 engine. JIT compilation, run time optimization, garbage collection. Debug tools. Most importantly, smart people dedicated to making JavaScript fast.</notes>
 
       <notes>The earliest JavaScript I wrote that is still in production somewhere (Shoutout to YDOP/GameJolt)</notes>
     </div>
 
+    <div><img src="nodejs.png">
+      2009
+    </div>
+
     <div>
-      2009 CoffeeScript
+      2009 CoffeeScript<br>
 
       <small>Compile to JS</small>
 
@@ -146,9 +143,9 @@
     </div>
 
     <div>
-      2011 Node Webkit<br>
+      2011 Node Webkit & PhoneGap<br>
 
-      <small>The final frontier: JavaScript on the desktop</small>
+      <small>The final frontiers: desktop & mobile</small>
 
       <notes>JavaScript for desktop applications. JavaScript top to bottom.</notes>
     </div>
@@ -162,7 +159,7 @@
     </div>
 
     <div>
-      2014 ESNext<br>
+      2013 ESNext & Traceur<br>
 
       <small>Use ES6 features today!</small>
 
@@ -176,29 +173,85 @@
     </div>
 
     <div>
-      2015 State of JavaScript<br>
-      <small>Past evented servers & dynamic web pages</small>
+      State of JavaScript<br>
+
+      <small>the good, the bad, and the ugly</small>
+
+      <notes>We've come a long way since 1995</notes>
+    </div>
+
+    <div><img src="cfaz-screenshot.png">
+      APPS
+      <notes>Background on my work - highlights of CarFreeAtoZ/Modeify - NodeJS backed single page web app - Component based front end framework (does not currently use Babel)</notes>
+    </div>
+
+    <div><img src="hexacabi.png">
+      FUN
+      <notes>
+        Also work on viz tools, I write a lot of JavaScript (D3, Leaflet, Crossfilter, etc.)
+
+        Wiring components together.
+
+        Libraries, templates, event handlers, APIs, databases. This is the fun stuff. Solving new problems in novel ways.
+      </notes>
+    </div>
+
+    <div><img src="data-manager.png">
+      NOT FUN
+      <notes>
+        Form building, formatting data into tables, creating generic API endpoints for new data models. Reinventing the wheel.
+      </notes>
     </div>
 
     <div>
-      <ul>
-        <li>Atom</li>
-        <li>Browserify</li>
-        <li>Esprima/Espree</li>
-        <li>ESLint</li>
-        <li>Gulp/Grunt/Broccoli</li>
-        <li>React Native</li>
-      </ul>
+      Modern Development<br>
+      <small>a balance between sprinting on a treadmill and thinking the rest of the world is never going to catch up</small>
 
-      <notes>We have legitimate applications, build systems, syntax tree parsers, pluggable validators, and complex build systems. We use it everywhere.</notes>
+      <notes>Sometimes it feels like we're recreating the wheel all of the time</notes>
     </div>
 
     <div>
-      ES6<br>
+      ~139,000 NPM Packages
+
+      <notes>
+        Past evented servers & dynamic web pages
+
+        Atom, Bower, Browserify, Esprima/Espree, ESLint, Grunt/Gulp, Ionic, JSDoc, NPM, React Native, Yeoman
+
+        We have legitimate applications, package managers, documentation generators, syntax tree parsers, pluggable code validators, and complex build systems. We use it everywhere. A huge ecosystem of libraries, modules, and tools for inifinite applications.</notes>
+    </div>
+
+    <div>
+      308 (known) compile-to-js langs
+
+      <notes>AtScript, ClojureScript, CoffeeScript, Dart, FlowType, TypeScript</notes>
+    </div>
+
+    <div>
+      Reusability and sharing isn't just about working code, it's about understanding
+    </div>
+
+    <div data-bodyclass="contain">
+      <img src="too-damn-high.jpg">
+
+    </div>
+
+    <div>Applying Technical Credits Broadly</div>
+
+    <div><img src="up-in-the-air.jpg">
+      Decisions bring baggage
+    </div>
+
+    <div>
+      The Future: ES6<br>
 
       <small>A language people want to use</small>
 
       <notes>Don't expect any big changes. Pretty safe to assume it's stable at this point. Stop calling it ES2015, that's just stupid. A lot of the noticeable changes are syntactic sugar. It also standardizes common practices and alleviaates common painpoints.</notes>
+    </div>
+
+    <div>
+      Quick Overview
     </div>
 
     <div>
@@ -252,28 +305,66 @@ const hours = 1000 * 1000 * 1000
     <div>
       Arrow Functions
       <pre>
-// TODO: Example
-class Langs {
-  unique () {
-    return this.data.map()
-  }
-}
+this.itineraries.forEach((i) => {
+  if (i.trips.length > 0)
+    this.multiLeg.push(v)
+})
       </pre>
 
       <notes>Expression and statement bodies, lexical this.</notes>
     </div>
 
     <div>
+      Destructuring
+<pre>
+let [one, , three] = [1, 2, 3]
 
-
-    <div>
-      Express, ComponentJS, Mongoose, D3, Backbone, Crossfilter, Leaflet, jQuery, Superagent, etc.
-
-      <notes>These are all libraries and modules I have intimate familiarity with from my time in JS land. A lot of them recreate the wheel on a regular basis.</notes>
+let { good: g, bad: b, ugly: u} = findResults()
+</pre>
     </div>
 
-    <div><img src="up-in-the-air.jpg">
-      Decisions bring baggage
+    <div>
+      Native Modules
+<pre>
+import bcrypt from 'bcryptjs'
+
+export function babelify() {
+  ...
+}
+</pre>
+    </div>
+
+    <div>
+      Generators, Promises, Map, Set, Symbols, ...Rest/Spread, and more
+    </div>
+
+    <div data-bodyclass="white"><img src="babel.png">
+      <notes>With babel this is all available right now</notes>
+    </div>
+
+    <div>
+      But so what?
+
+      <notes>You probably already knew you could use Babel to write ES6 features. But it doesn't stop there.</notes>
+    </div>
+
+    <div>
+      Writing code for 2020 and Beyond
+    </div>
+
+    <div>
+      With Babel:
+      <ul>
+        <li>Modern features of ES6</li>
+        <li>Interoperable compiled code for legacy systems</li>
+        <li>Community embracing the future</li>
+      </ul>
+
+      <notes></notes>
+    </div>
+
+    <div>
+
     </div>
   </body>
 </html>
