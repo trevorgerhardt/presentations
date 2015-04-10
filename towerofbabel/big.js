@@ -30,6 +30,9 @@ window.onload = function() {
         resize();
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
+        if (e.querySelector('notes')) {
+          console.log(e.querySelector('notes').textContent);
+        }
     }
     document.onclick = function() { go(++big.current % (s.length)); };
     function fwd() { go(Math.min(s.length - 1, ++big.current)); }
